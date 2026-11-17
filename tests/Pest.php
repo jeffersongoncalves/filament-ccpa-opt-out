@@ -1,3 +1,5 @@
 <?php
 
-uses(JeffersonGoncalves\Filament\CcpaOptOut\Tests\TestCase::class)->in('Feature');
+use JeffersonGoncalves\Filament\CcpaOptOut\Tests\TestCase;
+
+uses(TestCase::class)->in('Feature');
