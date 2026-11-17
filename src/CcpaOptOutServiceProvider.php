@@ -2,17 +2,17 @@
 
 namespace JeffersonGoncalves\Filament\CcpaOptOut;
 
+use JeffersonGoncalves\FilamentPluginCore\BasePackageServiceProvider;
 use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class CcpaOptOutServiceProvider extends PackageServiceProvider
+class CcpaOptOutServiceProvider extends BasePackageServiceProvider
 {
+    public static string $name = 'filament-ccpa-opt-out';
+
     public function configurePackage(Package $package): void
     {
         $package
-            ->name('filament-ccpa-opt-out')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigrations();
+            ->name(static::$name)
+            ->hasTranslations();
     }
 }
